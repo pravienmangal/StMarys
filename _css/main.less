@@ -1,0 +1,587 @@
+
+/* 	--------------------------------------------------
+	CSS LESS
+	PROJECT : Appleby - FidCo
+	BY : GAJEN
+	DATE : FEBRUARY 2016
+	-------------------------------------------------- */
+
+
+/* 	--------------------------------------------------
+	TABLE OF CONTENTS 
+	-------------------------------------------------- 
+
+	1.0 RESET
+	2.0 CLEARFIX
+	3.0 VARIABLES - COLOURS
+	4.0 LINKS
+	5.0 LISTS
+	6.0 MISC
+
+	7.0 TYPOGRAPHY
+		7.1 FONTFACE
+		7.2 TYPOGRAPHY
+
+	8.0 LAYOUT
+		8.1 DEVICE WIDTH UPTO 640
+		8.2 DEVICE WIDTH FROM 641
+		8.3 DEVICE WIDTH FROM 768
+		8.4 DEVICE WIDTH FROM 960
+		8.5 RETINA DISPLAY
+*/
+
+
+/*	1.0 ----------------------------------------------
+	RESET
+	-------------------------------------------------- */
+
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section, summary,
+	time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section { display: block; }
+
+	blockquote, q { quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after { content: ''; content: none; }
+	ins { background-color: #ff9; color: #000; text-decoration: none; }
+	mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+	del { text-decoration: line-through; }
+	abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+	table { border-collapse: collapse; border-spacing: 0; }
+	hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+	input, select { vertical-align: middle; }
+
+	select, input, textarea, button { outline: none; }
+	pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+	html { overflow-y: scroll; }
+	a:hover, a:active { outline: none; }
+	ul, ol { margin:0; padding:0; }
+	nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+	small { font-size: 85%; }
+	strong, th { font-weight: bold; }
+	td { vertical-align: top; }
+
+	sub, sup { font-size: 75%; line-height: 0; position: relative; }
+	sup { top: -0.5em; }
+	sub { bottom: -0.25em; }
+
+	pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+	textarea { overflow: auto; }
+	.ie6 legend, .ie7 legend { margin-left: -7px; } 
+	input[type="radio"] { vertical-align: text-bottom; }
+	input[type="checkbox"] { vertical-align: bottom; }
+	.ie7 input[type="checkbox"] { vertical-align: baseline; }
+	.ie6 input { vertical-align: text-bottom; }
+	label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+	button, input, select, textarea { margin: 0; }
+	input:valid, textarea:valid   {  }
+	input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+	.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+	button {  width: auto; overflow: visible; }
+	.ie7 img { -ms-interpolation-mode: bicubic; }
+	
+	body {
+		
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+	}
+	
+	textarea { resize:none; }
+
+	nav ul, ul.list, fieldset ul, .tweets ul, .slides ul { list-style:none; margin:0; padding:0; overflow:visible; height:100%;	}
+	
+	.box,
+	input, textarea, select {
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+		
+	i.fa {
+		margin-right:5px;
+	}	
+	i.fa.after {
+		margin-right:0;
+		margin-left:5px;
+	}
+	.overlayicon i.fa {
+		margin:0;
+	}
+	.site_search i.fa {
+		margin:0 auto;
+	}
+
+
+
+/*	2.0 ----------------------------------------------
+	CLEARFIX
+	-------------------------------------------------- */
+		 
+	/* Nicolas Gallagher's micro clearfix */
+	.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
+	.row:after, .clearfix:after { clear: both; }
+	.row, .clearfix { zoom: 1; }
+	
+
+	/* http://sonspring.com/journal/clearing-floats */
+	.clear {
+		clear: both;
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+
+	/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+	.clearfix:before,
+	.clearfix:after {
+		content: '\0020';
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+
+	.clearfix:after {
+		clear: both;
+		}
+
+	/* The following zoom:1 rule is specifically for IE6 + IE7.
+	Move to separate stylesheet if invalid CSS is a problem. */
+
+	.clearfix {
+		zoom: 1;
+	}
+
+		
+
+/*  3.0 ----------------------------------------------
+	VARIABLES
+	-------------------------------------------------- */
+
+	@black: #000000;
+	@white: #FFFFFF;
+	@brandColor: #0099a8;
+	@copyColor: #1d1d1d;
+	@darkGrey: #414042;
+
+
+
+/*	4.0 ----------------------------------------------
+	LINKS
+	-------------------------------------------------- */
+	
+	a { 
+		text-decoration: none; 
+		line-height: inherit; 
+		cursor:pointer; 
+		color: @copyColor;
+	}
+	a,
+	button,
+	button span,	
+	a span,
+	a strong,
+	input,
+	textarea, 
+	select,
+	.button,
+	.item,
+	.item p.heading,
+	.slick-prev, .slick-next { 
+		
+		-webkit-transition: all 0.25s ease;
+		-moz-transition: all 0.25s ease;
+		-ms-transition: all 0.25s ease;
+		-o-transition: all 0.25s ease;
+		transition: all 0.25s ease;
+	}	
+	a:hover { 
+		text-decoration: none;
+		color: @copyColor;
+	}
+	a:focus { 
+		outline: none; 
+		text-decoration: none; 
+		color: @copyColor;
+	}
+	a:visited { 
+		outline: none;  
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+		filter: alpha(opacity=80);
+		-moz-opacity: 0.8;
+		-khtml-opacity: 0.8;
+		opacity:0.8;
+		color: @copyColor;
+	}
+	p a, p a:visited { 
+		line-height: inherit;
+		color: inherit;
+		color: @copyColor;
+	}
+	a.see_all { 
+		position:absolute; 
+		top:13px; 
+		right:0; 
+		font-size:11px; font-size:1.1rem; 
+	}
+	
+
+
+/*	5.0 ----------------------------------------------
+	LISTS
+	-------------------------------------------------- */
+	
+	ul, ol { 
+		padding: 0; 
+		margin-bottom:15px;
+		overflow: hidden;
+	}
+	ul { 
+		list-style: none; 
+	}
+	ol { 
+		padding-left: 20px;
+		list-style: decimal; 
+	}
+	ul ul,
+	ol ol {
+		.padding(0,0,0,15);
+	}
+	ul ul {
+		list-style: circle outside; 
+	}
+	ol ol {
+		list-style: lower-roman; 
+	}
+	ol, 
+	ul.square, 
+	ul.circle, 
+	ul.disc { 
+	}
+	ul.square { 
+		list-style: square outside; 
+	}
+	ul.circle { 
+		list-style: circle outside; 
+	}
+	ul.disc { 
+		list-style: disc outside; 
+	}
+		
+	nav ul,
+	nav li {
+		padding:0;
+	} 
+		
+	dl { 
+	}
+	dl dt { 
+		font-weight:bold;
+		padding-bottom: 2px;
+	}	
+	dl dd { 
+		padding-bottom: 2px; 
+	}
+		
+	
+
+/* 	6.0 ----------------------------------------------
+	MISC
+	-------------------------------------------------- */
+	
+	.text-left { 
+		text-align: left; 
+	}
+	.text-right { 
+		text-align: right; 
+	}
+	.text-center { 
+		text-align: center; 
+	}
+	.text-upper {
+		text-transform:uppercase;
+	}
+	.hide { 
+		display: none; 
+	}	
+	object, embed { 
+		max-width: none; 
+	}
+	img { 
+		width:100%; 
+		height:auto;
+		max-width: 100%;
+		display: block;
+	}
+		
+			
+
+/*	7.0 ----------------------------------------------
+	TYPOGRAPHY
+	-------------------------------------------------- */
+	
+	/*	7.1 ----------------------------------------------
+		FONTFACE
+		-------------------------------------------------- */
+		
+		@font-face {
+		    font-family: 'montserratblack';
+		    src: url('../_fonts/montserrat-black.eot');
+		    src: url('../_fonts/montserrat-black.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-black.woff') format('woff'),
+		         url('../_fonts/montserrat-black.ttf') format('truetype'),
+		         url('../_fonts/montserrat-black.svg#montserratblack') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'montserratbold';
+		    src: url('../_fonts/montserrat-bold.eot');
+		    src: url('../_fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-bold.woff') format('woff'),
+		         url('../_fonts/montserrat-bold.ttf') format('truetype'),
+		         url('../_fonts/montserrat-bold.svg#montserratbold') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'montserratextra_bold';
+		    src: url('../_fonts/montserrat-extrabold.eot');
+		    src: url('../_fonts/montserrat-extrabold.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-extrabold.woff') format('woff'),
+		         url('../_fonts/montserrat-extrabold.ttf') format('truetype'),
+		         url('../_fonts/montserrat-extrabold.svg#montserratextra_bold') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'montserrathairline';
+		    src: url('../_fonts/montserrat-hairline.eot');
+		    src: url('../_fonts/montserrat-hairline.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-hairline.woff') format('woff'),
+		         url('../_fonts/montserrat-hairline.ttf') format('truetype'),
+		         url('../_fonts/montserrat-hairline.svg#montserrathairline') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'montserratlight';
+		    src: url('../_fonts/montserrat-light.eot');
+		    src: url('../_fonts/montserrat-light.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-light.woff') format('woff'),
+		         url('../_fonts/montserrat-light.ttf') format('truetype'),
+		         url('../_fonts/montserrat-light.svg#montserratlight') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'montserratregular';
+		    src: url('../_fonts/montserrat-regular.eot');
+		    src: url('../_fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-regular.woff') format('woff'),
+		         url('../_fonts/montserrat-regular.ttf') format('truetype'),
+		         url('../_fonts/montserrat-regular.svg#montserratregular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'montserratsemi_bold';
+		    src: url('../_fonts/montserrat-semibold.eot');
+		    src: url('../_fonts/montserrat-semibold.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-semibold.woff') format('woff'),
+		         url('../_fonts/montserrat-semibold.ttf') format('truetype'),
+		         url('../_fonts/montserrat-semibold.svg#montserratsemi_bold') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'montserratultra_light';
+		    src: url('../_fonts/montserrat-ultralight.eot');
+		    src: url('../_fonts/montserrat-ultralight.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/montserrat-ultralight.woff') format('woff'),
+		         url('../_fonts/montserrat-ultralight.ttf') format('truetype'),
+		         url('../_fonts/montserrat-ultralight.svg#montserratultra_light') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+
+
+
+	/*	7.2 ----------------------------------------------
+		TYPOGRAPHY
+		-------------------------------------------------- */
+		
+		html { 
+			background: @white;
+			font-size: 62.5%;
+			-webkit-overflow-scrolling: touch;
+			-webkit-tap-highlight-color: @white;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			height: 100%;
+		}
+
+		/*	MIXINS --------------------------------------- */
+			@import 'mixins.less';
+
+		body { 
+			width: 100%;
+			color: #000;
+		} 
+		body,	
+		input,
+		select,
+		textarea, 
+		button {
+			font-size: 14px;
+			font-family: 'montserratlight', Arial, sans-serif;
+			font-weight:400;
+			line-height: 1.2;
+		}
+		
+		h1, h2, h3, h4, h5, h6 { 
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: normal;
+			line-height: 1.2;
+			font-family: 'montserratregular', Arial, verdana;
+			color: #000;
+		}
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { 
+			font-weight: inherit; 
+		}
+		h1 {font-size:36px; .padding(0,0,5,0);}
+		h2 {font-size:28px; .padding(0,0,5,0);}
+		h3 {font-size:24px; .padding(15,0,10,0);}
+		h4 {font-size:20px; .padding(10,0,10,0);}
+		h5{font-size:18px; .padding(10,0,10,0);}
+		h6{font-size:14px; .padding(10,0,10,0);}
+		
+		p, div.text { 
+			.padding(0,0,15,0);
+			line-height:22px;
+		}
+		p img { 
+			margin: 0; 
+		}
+
+		em, i { font-style: italic; line-height: inherit; }
+		strong, b { font-weight: bold; line-height: inherit; }
+		small { font-size: 80%; line-height: inherit; }
+		
+		hr { border: solid #000; border-width: 1px 0 0; clear: both; margin: 20px auto; height: 0; width:100%; }
+		
+		abbr, acronym { text-transform: uppercase; font-size: 90%; border-bottom: 1px solid #000; cursor: help; }
+		abbr { text-transform: none; }
+
+		::-webkit-input-placeholder { /* WebKit browsers */
+			color: #000;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color: #000;
+		   opacity:  1;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color: #000;
+		   opacity:  1;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+		   color: #000;
+		}
+
+
+
+/*	8.0 ----------------------------------------------
+	LAYOUT
+	-------------------------------------------------- */
+
+	/*	8.1 ----------------------------------------------
+		DEVICE WIDTH UPTO 640
+		-------------------------------------------------- */
+		body {
+		}
+		.wrapper {
+			margin: 0 auto;
+			max-width: 1280px;
+		}
+		.row {
+			margin: 0 auto 20px;
+			overflow: hidden;
+
+			.row  {
+				margin-left:-15px;
+				margin-right:-15px;
+			}
+		}
+		.row-content {
+			margin: 0 auto;
+			max-width:1280px;
+			overflow: hidden;
+		}
+
+	/*	8.1.1 ----------------------------------------------
+		DEVICE WIDTH FROM 480
+		-------------------------------------------------- */
+		
+		@media only screen and (min-width: 480px) {
+		}
+
+
+	/*	8.2 ----------------------------------------------
+		DEVICE WIDTH FROM 641
+		-------------------------------------------------- */
+		
+		@media only screen and (min-width: 640px) {
+		}
+
+	/*	8.3 ----------------------------------------------
+		DEVICE WIDTH FROM 768
+		-------------------------------------------------- */
+		
+		@media only screen and (min-width: 768px) {
+		}
+
+	/*	8.3 ----------------------------------------------
+		DEVICE WIDTH FROM 1024
+		-------------------------------------------------- */
+		
+		@media only screen and (min-width: 1024px) {
+		}
+
+	/*	8.4 ----------------------------------------------
+		DEVICE WIDTH FROM 1224
+		-------------------------------------------------- */
+		
+		@media only screen and (min-width: 1224px) {
+		}
+
+	/*	8.5 ----------------------------------------------
+		RETINA DISPLAY
+		-------------------------------------------------- */
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+			header .logo-nav-search .logo {
+				background:url(../_images/logo-large.png) no-repeat top left;
+				background-size: 167px 55px;
+			}
+		}
