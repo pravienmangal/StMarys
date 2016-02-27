@@ -336,6 +336,27 @@
 	/*	7.1 ----------------------------------------------
 		FONTFACE
 		-------------------------------------------------- */
+		@font-face {
+		    font-family: 'lato-black';
+		    src: url('../_fonts/lato-webfontkit/lato-black-webfont.eot');
+		    src: url('../_fonts/lato-webfontkit/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/lato-webfontkit/lato-black-webfont.woff') format('woff'),
+		         url('../_fonts/lato-webfontkit/lato-black-webfont.ttf') format('truetype'),
+		         url('../_fonts/lato-webfontkit/lato-black-webfont.svg#lato-black') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}    
+		
+		@font-face {
+		    font-family: 'lato-regular';
+		    src: url('../_fonts/lato-webfontkit/lato-regular-webfont.eot');
+		    src: url('../_fonts/lato-webfontkit/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/lato-webfontkit/lato-regular-webfont.woff') format('woff'),
+		         url('../_fonts/lato-webfontkit/lato-regular-webfont.ttf') format('truetype'),
+		         url('../_fonts/lato-webfontkit/lato-regular-webfont.svg#lato-regular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}    
 		
 		@font-face {
 		    font-family: 'montserratblack';
@@ -517,9 +538,146 @@
 	-------------------------------------------------- */
 
 
+.top-container {
+	width: 100%;
+	background-color: #4e505d;
+
+	.top-header-content {
+		width: 1125px;
+		margin: 0 auto;
+		color: @white;
+		text-transform: uppercase;
+		font-size: 12px;
+		padding: 15px;
+
+		a {
+			border: 1px solid @white;
+			border-radius: 10px;
+			color: @white;
+			padding: 5px;
+			margin-left: 20px; 
+		}
+	}
+}
+
+.header-wrapper {
+	width: 100%;
+	opacity: 0.3;
+	background-color: #c7c7c7;
+	overflow: hidden;
+
+	.header-container {
+		width: 1125px;
+		margin: 0 auto;
+		overflow: hidden;
+
+		.logo {
+			overflow: hidden;
+			width: 170px;
+			height: 60px;
+			display: inline-block;
+
+			img {
+				width: 100%;
+				opacity: 1;				
+			}
+		}
+
+		nav {
+			overflow: hidden;
+			float: right;
+
+			ul {
+				padding-top: 20px;
+
+				li {
+					float: left;
+
+					a {
+
+						color: @white;
+						font-size: 12px;
+						text-transform: uppercase;
+						padding: 0 30px;
+						font-family: 'lato-bold';
+					}
+				}
+				.donate {
+					border: 1px solid @white;
+					border-radius: 10px;
+					background-color: @white;
+
+					a {
+						color: #4d8fda;
+					}
+				}	
+			}	
+		}
+	}
+}
+
+.container-fluid {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+	.hero {
+		background: url(../_images/nature.jpg) no-repeat;
+		width: 100%;
 
 
+	}
 
+	.hero-container {
+		width: 1125px;
+		margin: 0 auto;
+
+		h1 {
+			color: @white;
+			margin-top: 175px;
+			margin-left: 158px;
+			text-transform: uppercase;
+			font-family: 'lato-black';
+		}
+
+		p {
+			color: @white;
+			font-family: 'lato-regular';
+			margin-left: 158px;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+
+		a.button {
+			color: @white;
+			font-size: 14px;
+			padding: 15px 30px;
+			background-color: #d14d42;
+			margin-left: 158px;			
+		}
+
+		.pagination {
+			margin-left: 158px;
+			margin-top: 10px;
+
+			ul {
+
+				li {
+					float: left;
+
+					a {
+
+						font-weight: bold;
+						color: @white;
+						font-size: 20px;
+						padding-right: 20px;
+					}
+				}
+			}
+		}
+	}
+
+}
 
 
 
