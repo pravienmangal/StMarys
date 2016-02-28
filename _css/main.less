@@ -176,6 +176,7 @@
 	@brandColor: #0099a8;
 	@copyColor: #1d1d1d;
 	@darkGrey: #414042;
+	@buttonColor: #d14d42;
 
 
 
@@ -448,7 +449,6 @@
 		}
 
 
-
 	/*	7.2 ----------------------------------------------
 		TYPOGRAPHY
 		-------------------------------------------------- */
@@ -532,163 +532,14 @@
 		}
 
 
-
 /*	8.0 ----------------------------------------------
 	LAYOUT
 	-------------------------------------------------- */
 
-
-.top-container {
-	width: 100%;
-	background-color: #4e505d;
-
-	.top-header-content {
-		width: 1125px;
-		margin: 0 auto;
-		color: @white;
-		text-transform: uppercase;
-		font-size: 12px;
-		padding: 15px;
-
-		a {
-			border: 1px solid @white;
-			border-radius: 10px;
-			color: @white;
-			padding: 5px;
-			margin-left: 20px; 
-		}
-	}
-}
-
-.header-wrapper {
-	width: 100%;
-	opacity: 0.3;
-	background-color: #c7c7c7;
-	overflow: hidden;
-
-	.header-container {
-		width: 1125px;
-		margin: 0 auto;
-		overflow: hidden;
-
-		.logo {
-			overflow: hidden;
-			width: 170px;
-			height: 60px;
-			display: inline-block;
-
-			img {
-				width: 100%;
-				opacity: 1;				
-			}
-		}
-
-		nav {
-			overflow: hidden;
-			float: right;
-
-			ul {
-				padding-top: 20px;
-
-				li {
-					float: left;
-
-					a {
-
-						color: @white;
-						font-size: 12px;
-						text-transform: uppercase;
-						padding: 0 30px;
-						font-family: 'lato-bold';
-					}
-				}
-				.donate {
-					border: 1px solid @white;
-					border-radius: 10px;
-					background-color: @white;
-
-					a {
-						color: #4d8fda;
-					}
-				}	
-			}	
-		}
-	}
-}
-
-.container-fluid {
-	width: 100%;
-	padding-left: 0;
-	padding-right: 0;
-
-	.hero {
-		background: url(../_images/nature.jpg) no-repeat;
-		width: 100%;
-
-
-	}
-
-	.hero-container {
-		width: 1125px;
-		margin: 0 auto;
-
-		h1 {
-			color: @white;
-			margin-top: 175px;
-			margin-left: 158px;
-			text-transform: uppercase;
-			font-family: 'lato-black';
-		}
-
-		p {
-			color: @white;
-			font-family: 'lato-regular';
-			margin-left: 158px;
-			margin-top: 20px;
-			margin-bottom: 30px;
-		}
-
-		a.button {
-			color: @white;
-			font-size: 14px;
-			padding: 15px 30px;
-			background-color: #d14d42;
-			margin-left: 158px;			
-		}
-
-		.pagination {
-			margin-left: 158px;
-			margin-top: 10px;
-
-			ul {
-
-				li {
-					float: left;
-
-					a {
-
-						font-weight: bold;
-						color: @white;
-						font-size: 20px;
-						padding-right: 20px;
-					}
-				}
-			}
-		}
-	}
-
-}
-
-
-
-
-
-
 	/*	8.1 ----------------------------------------------
 		DEVICE WIDTH UPTO 640
 		-------------------------------------------------- */
-		body {
-		}
+
 		.wrapper {
 			margin: 0 auto;
 			max-width: 1280px;
@@ -704,9 +555,195 @@
 		}
 		.row-content {
 			margin: 0 auto;
-			max-width:1280px;
+			max-width:1120px;
 			overflow: hidden;
 		}
+		.top-info-bar {
+			background-color: #4e505d;
+			margin-bottom: 0;
+			color: @white;
+			text-transform: uppercase;
+			font-size: 12px;
+			padding: 10px 0;
+			text-align: center;
+
+			a {
+				border: 1px solid @white;
+				border-radius: 10px;
+				color: @white;
+				padding: 5px;
+				margin-left: 20px; 
+				display: inline-block;
+			}
+		}
+		header {
+			background: rgba(255,255,255,.3);
+			position: fixed;
+			width: 100%;
+			padding: 10px 0;
+			z-index: 999;
+
+			.logo {
+				width: 172px;
+				height: 62px;
+				display: inline-block;
+			}
+			nav {
+				ul {
+					padding-top: 20px;
+					float: right;
+
+					li {
+						float: left;
+
+						a {
+							color: @white !important;
+							font-size: 12px;
+							text-transform: uppercase;
+							padding: 0 30px;
+							font-family: 'lato-black';
+						}
+					}
+					.donate {
+						border: 1px solid @white;
+						border-radius: 10px;
+						background-color: @white;
+
+						a {
+							color: #4d8fda !important;
+						}
+					}	
+				}	
+			}
+		}
+		.container-area {
+			.hero {
+				position: relative;
+
+				.hero-carousel {
+					.carousel-item {
+						position: relative;
+						img {
+
+						}
+						.carousel-item-info {
+							max-width: 800px;
+							position: absolute;
+							top: 250px;
+							left: 240px;
+
+							h2 {
+								color: @white;
+								text-transform: uppercase;
+								font-family: 'lato-black';
+							}
+
+							p {
+								color: @white;
+								font-family: 'lato-regular';
+								margin-bottom: 30px;
+							}
+
+							a.button {
+								color: @white;
+								font-size: 14px;
+								padding: 15px 30px;
+								background-color: @buttonColor;
+								font-family: 'lato-regular';		
+							}
+						}
+					}
+				}
+				.upcoming-event{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					background: rgba(99,95,95,.9);
+					width: 100%;
+
+					.event-container {
+						padding: 50px 0;
+
+						.event-column {
+							overflow: hidden;
+
+							.date {
+								width: 80px;
+								height: 80px;
+								background-color: @buttonColor;
+								text-align: center;
+								overflow: hidden;
+								text-transform: uppercase;
+								color: @white;
+								font-family: 'lato-regular';
+								display: inline-block;
+								float: left;
+
+								span {
+									font-family: 'lato-black';
+									font-weight: bold;
+									font-size: 40px;
+									display: block;
+									color: @white;
+								}
+
+							}
+
+							.event-venue {
+								float: left;
+								color: @white;
+								padding: 0 20px;
+								font-family: 'lato-black';
+								border-right: 2px solid @buttonColor;
+
+								h4 {
+									color: white;
+									line-height: 10px;
+									text-transform: uppercase;
+								}
+
+								span {
+									color: #adaeb2;
+									display: block;
+									font-size: 14px;
+									line-height: 20px;
+								}
+							}
+
+							.event-info {
+								color: @white;
+								font-family: 'lato-regular';
+								padding: 0 30px;
+								display: block;
+								overflow: hidden;
+
+								p {
+									line-height: 16px;
+								}
+							}
+						}
+
+						a.calendar-column {
+							color: @white;
+							font-family: 'lato-block';
+							font-size: 20px;
+							font-weight: bold;
+							border: 2px solid @white;
+							line-height: 75px;
+							padding: 24px 30px;
+						}
+					}
+				}
+			}
+
+			.container-wrapper {
+				background-color: @white;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+		}
+
+
 
 	/*	8.1.1 ----------------------------------------------
 		DEVICE WIDTH FROM 480
