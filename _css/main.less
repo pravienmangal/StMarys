@@ -616,11 +616,12 @@
 		}
 		header {
 			background: rgba(255,255,255,.3);
-			position: fixed;
+			/*position: fixed;*/
 			width: 100%;
 			z-index: 800;
 			top: 46px;
 			left: 0;
+			background-color: @buttonColor;
 
 			.logo {
 				width: 172px;
@@ -651,8 +652,12 @@
 						}
 
 						a:hover {
-						background-color: @hoverColor;
+							background-color: @hoverColor;
 
+						}
+
+						a:active {
+							background-color: @hoverColor;
 						}
 
 						a.icon-search:hover {
@@ -674,6 +679,87 @@
 						padding: 3px 30px;
 					}		
 				}	
+			}
+		}
+		.ministry-nav {
+			overflow: hidden;
+			background-color: @hoverColor;
+			position: absolute;
+			top: 136px;
+			left: 80px;
+			z-index: 9999;
+			display: none;
+
+			.icon-cancel {
+				color: #a1a2a9;
+				position: absolute;
+				top: 10px;
+				right: 15px;
+				font-size: 26px;
+				cursor: pointer;
+			}
+
+			.ministry-items {
+				overflow: hidden;
+				padding: 40px 80px;
+				font-size: 16px;
+				font-family: 'lato-regular';
+
+				ul {
+					overflow: hidden;
+					border-right: 1px solid #292a2c;
+
+					li {
+
+						a {
+							color: @white;
+							line-height: 29px;
+						}
+
+						a:hover {
+							color: @buttonColor;
+						}
+
+						a.active {
+							color: @buttonColor;
+						}				
+					}
+				}
+
+				ul.last-col {
+					border-right: none;
+				}
+			}
+
+			.ministry-content {
+				overflow: hidden;
+				padding: 20px 80px 50px;
+
+				.ministry-info {
+					overflow: hidden;
+
+					h5 {
+						font-family: 'lato-bold';
+						line-height: 29px;
+						color: @buttonColor;
+					}
+
+					p {
+						font-family: 'lato-regular';
+						font-size: 14px;
+						color: @white;
+					}
+				}
+
+				.ministry-content-item {
+					overflow: hidden;
+					display: none;
+
+				}
+
+				.ministry-content-item .active {
+					display: block !important;
+				}
 			}
 		}
 		.container-area {

@@ -30,7 +30,7 @@
 			<nav class="col-md-9">
 				<ul>
 					<li><a href="#">Home</a></li>
-					<li><a href="#">Ministry</a></li>
+					<li><a class="ministry" href="#">Ministry</a></li>
 					<li><a href="#">Events Calendar</a></li>
 					<li class="donate"><a href="#">Donate</a></li>
 					<li class="search-icon"><a class="icon-search" href="#"></a></li>
@@ -38,6 +38,80 @@
 			</nav>
 		</div>	
 	</header>
+	<div class="row ministry-nav">
+		<div class="icon-cancel"></div>
+		<div class="row-content ministry-items">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<ul>
+					<li><a rel="ministtry-content1" class="active" href="#">Adult Formation</a></li>
+					<li><a rel="ministtry-content2" href="#">Music Ministry</a></li>
+					<li><a rel="ministtry-content3" href="#">Pathways Counseling Center</a></li>
+					<li><a rel="ministtry-content4" href="#">Social Justice</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<ul>
+					<li><a rel="ministtry-content5" href="#">Health & Wellness</a></li>
+					<li><a rel="ministtry-content6" href="#">Parish Life</a></li>
+					<li><a rel="ministtry-content7" href="#">Sacraments</a></li>
+					<li><a rel="ministtry-content8" href="#">Youth Ministry</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<ul>
+					<li><a rel="ministtry-content9" href="#">Hispanic Ministry</a></li>
+					<li><a rel="ministtry-content10" href="#">Outreach School</a></li>
+					<li><a rel="ministtry-content11" href="#">School</a></li>
+					<li><a rel="ministtry-content12" href="#">Special Needs</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<ul class="last-col">
+					<li><a rel="ministtry-content13" href="#">Liturgy and Worship</a></li>
+					<li><a rel="ministtry-content14" href="#">Pastoral Care</a></li>
+					<li><a rel="ministtry-content15" href="#">Religious Education</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row-content ministry-content" >
+			<div class="ministry-content-item active" id="ministry-content1">
+				<div class="col-md-5">
+					<div class="ministry-thumbnail"><img src="../_images/minis-thumb.png"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="ministry-info">
+						<h5>Adult Faith Formation</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>				
+			</div>
+			<div class="ministry-content-item" id="ministry-content2">
+				<div class="col-md-5">
+					<div class="ministry-thumbnail"><img src="../_images/minis-thumb.png"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="ministry-info">
+						<h5>Adult Faith Formation</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>				
+			</div>
+			<div class="ministry-content-item" id="ministry-content3">
+				<div class="col-md-5">
+					<div class="ministry-thumbnail"><img src="../_images/minis-thumb.png"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="ministry-info">
+						<h5>Adult Faith Formation</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
 	<div class="container-area">
 		<section class="row hero">
 			<div class="hero-carousel">
@@ -532,6 +606,29 @@
 		$('.news-slider').bxSlider();
 		$('.highlight-slider').bxSlider();
 
+
+		//Ministry navigation slide
+		$('.ministry').click(function(e){
+			e.preventDefault();
+			$('.ministry-nav').slideDown(500);
+		});
+
+		//Ministry links and contents
+		var $ministryLink = $('.ministry-items li a');
+
+		$ministryLink.click(function(){
+			var $contentToShow = $(this).attr('rel');
+			//Which content to hide
+			$('.ministry-content-item .active').hide(300, function(){
+				$(this).removeClass('active');
+			});
+		});
+		
+
+		//Close navigation slider
+		$('.ministry-nav .icon-cancel').click(function(){
+			$('.ministry-nav').slideUp(500);
+		});
 
 		//Click view calendar event - add class
 		$('.view-calendar').on('click', function(e) {
