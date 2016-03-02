@@ -43,7 +43,7 @@
 		<div class="row-content ministry-items">
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<ul>
-					<li><a rel="ministtry-content1" class="active" href="#">Adult Formation</a></li>
+					<li><a rel="ministtry-content1" class="selected" href="#">Adult Formation</a></li>
 					<li><a rel="ministtry-content2" href="#">Music Ministry</a></li>
 					<li><a rel="ministtry-content3" href="#">Pathways Counseling Center</a></li>
 					<li><a rel="ministtry-content4" href="#">Social Justice</a></li>
@@ -220,10 +220,10 @@
 						<div class="caousel-item">
 							<div class="col-md-3">
 								<div class="news-box">
-									<h5>Adult Faith Formationssssssss</h5>
+									<h5>Adult Faith Formations</h5>
 									<p><span>March 4th and 5th 2016</span></p>
 									<div class="news-thumbnail">
-										<img src="../_images/motor.jpg" alt="thumbnail">			
+										<img src="../_images/news.png" alt="thumbnail">			
 									</div>
 									<p class="info-box">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -233,7 +233,20 @@
 							</div>
 							<div class="col-md-3">
 								<div class="news-box">
-									<h5>Adult Faith Formationssssssss</h5>
+									<h5>Adult Faith Formations</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<div class="info-box">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+									</div>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formations</h5>
 									<p><span>March 4th and 5th 2016</span></p>
 									<div class="news-thumbnail">
 										<img src="../_images/motor.jpg" alt="thumbnail">			
@@ -246,20 +259,7 @@
 							</div>		
 							<div class="col-md-3">
 								<div class="news-box">
-									<h5>Adult Faith Formationssssssss</h5>
-									<p><span>March 4th and 5th 2016</span></p>
-									<div class="news-thumbnail">
-										<img src="../_images/motor.jpg" alt="thumbnail">			
-									</div>
-									<p class="info-box">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									</p>
-									<a class="button">View More ></a>		
-								</div>			
-							</div>		
-							<div class="col-md-3">
-								<div class="news-box">
-									<h5>Adult Faith Formationssssssss</h5>
+									<h5>Adult Faith Formations</h5>
 									<p><span>March 4th and 5th 2016</span></p>
 									<div class="news-thumbnail">
 										<img src="../_images/motor.jpg" alt="thumbnail">			
@@ -619,8 +619,8 @@
 		$ministryLink.click(function(){
 			var $contentToShow = $(this).attr('rel');
 			//Which content to hide
-			$('.ministry-content-item .active').hide(300, function(){
-				$(this).removeClass('active');
+			$('.ministry-content-item .active').show(300, function(){
+				$(this).addClass('active');
 			});
 		});
 		
