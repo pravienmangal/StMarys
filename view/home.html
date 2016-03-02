@@ -4,8 +4,14 @@
 	<meta charset="UTF-8"/>
 	<script type="text/javascript" src="../_js/libs/jquery-1.11.3.min.js"></script>	
 	<script type="text/javascript" src="../_js/libs/bootstrap/bootstrap.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<script type="text/javascript" src="../_js/libs/jquery.bxslider.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../_css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../_css/main.css">
+	<!-- bxSlider CSS file -->
+	<link href="../_js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+	<!-- Font Icon CSS file -->
+	<link rel="stylesheet" type="text/css" href="../_fonts/font-icon/styles.css">
 	<title>StMarys Home Page</title>
 </head>
 <body>
@@ -27,7 +33,7 @@
 					<li><a href="#">Ministry</a></li>
 					<li><a href="#">Events Calendar</a></li>
 					<li class="donate"><a href="#">Donate</a></li>
-					<li class="search-icon"><a href="#">?</a></li>
+					<li class="search-icon"><a class="icon-search" href="#"></a></li>
 				</ul>
 			</nav>
 		</div>	
@@ -35,16 +41,42 @@
 	<div class="container-area">
 		<section class="row hero">
 			<div class="hero-carousel">
-				<div class="carousel-item">
-					<img src="../_images/nature2.jpg" alt="hero image" />
-					<div class="carousel-item-info">
-						<h2>
-							Welcome to </br> Saint Marys Catholic Church
-						</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<a class="button" href="#">Read More</a>
+				<div class="bxslider hero-slider">
+					<div class="carousel-item">
+						<img src="../_images/nature2.jpg" alt="hero image" />
+						<div class="carousel-item-info">
+							<h2>
+								Welcome to </br> Saint Marys Catholic Church
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<a class="button" href="#">Read More</a>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="../_images/nature2.jpg" alt="hero image" />
+						<div class="carousel-item-info">
+							<h2>
+								Welcome to </br> Saint Marys Catholic Church
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<a class="button" href="#">Read More</a>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="../_images/nature2.jpg" alt="hero image" />
+						<div class="carousel-item-info">
+							<h2>
+								Welcome to </br> Saint Marys Catholic Church
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<a class="button" href="#">Read More</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -67,11 +99,39 @@
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 									</div>	
 								</div>
+								<div class="carousel-item">
+									<div class="date">
+										<span>19</span>
+										Jan '16
+									</div>
+									<div class="event-venue">
+										<h4>Women of Prayer and Spirit</h4>
+										<span>Tuesday 6:00pm to 7:30pm</span>
+										<span class="icon-location">St. Mary's Church Premises</span>
+									</div>
+									<div class="event-info">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+									</div>	
+								</div>
+								<div class="carousel-item">
+									<div class="date">
+										<span>19</span>
+										Jan '16
+									</div>
+									<div class="event-venue">
+										<h4>Women of Prayer and Spirit</h4>
+										<span>Tuesday 6:00pm to 7:30pm</span>
+										<span>St. Mary's Church Premises</span>
+									</div>
+									<div class="event-info">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+									</div>	
+								</div>
 							</div>	
 						</div>
 					</div>
 					<div class="col-md-3">
-						<a class="calendar-column">
+						<a href="#" class="view-calendar">
 							View Event Calendar
 						</a>
 					</div>
@@ -82,96 +142,260 @@
 			<div class="row-content">
 				<h5 class="title">News & Updates</h5>
 				<div class="news-carousel">
-					<div class="caousel-item">
-						<div class="col-md-3 news-box">
-							<h5>Adult Faith Formationssssssss</h5>
-							<p><span>March 4th and 5th 2016</span></p>
-							<div class="news-thumbnail">
-								<img src="../_images/motor.jpg" alt="thumbnail">			
+					<div class="news-slider">
+						<div class="caousel-item">
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
 							</div>
-							<p class="info-box">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-							</p>
-							<a class="button">View More ></a>		
-						</div>		
-						<div class="col-md-3 news-box">
-							<h5>2016 Women's Cornerstone</h5>
-							<p><span>March 4th and 5th 2016</span></p>
-							<div class="news-thumbnail">
-								<img src="../_images/motor.jpg" alt="thumbnail">			
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+						</div>						
+						<div class="caousel-item">
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
 							</div>
-							<p class="info-box">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-							</p>
-							<a class="button">View More ></a>		
-						</div>		
-						<div class="col-md-3 news-box">
-							<h5>Annual Beedsteak Dinner</h5>
-							<p><span>March 4th and 5th 2016</span></p>
-							<div class="news-thumbnail">
-								<img src="../_images/motor.jpg" alt="thumbnail">			
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+							<div class="col-md-3 col-sm-6">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+						</div>						
+						<div class="caousel-item">
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
 							</div>
-							<p class="info-box">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-							</p>
-							<a class="button">View More ></a>		
-						</div>		
-						<div class="col-md-3 news-box news-box-last">
-							<h5>Adult Faith Formationsssssss</h5>
-							<p><span>March 4th and 5th 2016</span></p>
-							<div class="news-thumbnail">
-								<img src="../_images/motor.jpg" alt="thumbnail">			
-							</div>
-							<p class="info-box">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-							</p>
-							<a class="button">View More ></a>		
-						</div>		
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+							<div class="col-md-3">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+							<div class="col-md-3 col-sm-6">
+								<div class="news-box">
+									<h5>Adult Faith Formationssssssss</h5>
+									<p><span>March 4th and 5th 2016</span></p>
+									<div class="news-thumbnail">
+										<img src="../_images/motor.jpg" alt="thumbnail">			
+									</div>
+									<p class="info-box">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									</p>
+									<a class="button">View More ></a>		
+								</div>			
+							</div>		
+						</div>						
 					</div>
 				</div>
 			</div>
 			<div class="row-content">
 				<h5 class="title">Highlights</h5>
 				<div class="highlights-carousel">
-					<div class="carousel-item">
-						<div class="col-md-4">
-							<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
-							<div class="info-block">
-								<h5>Retirement Fund for Religeous</h5>
-								<p><span>March 4th and 5th 2016</span></p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-								</p>		
-							</div>
-						</div>		
-						<div class="col-md-4">
-							<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
-							<div class="info-block">
-								<h5>Franciscan Friar God Calling</h5>
-								<p><span>March 4th and 5th 2016</span></p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-								</p>		
-							</div>
-						</div>		
-						<div class="col-md-4">
-							<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
-							<div class="info-block">
-								<h5>Stephen Ministry Explore</h5>
-								<p><span>March 4th and 5th 2016</span></p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-								</p>		
-							</div>
-						</div>		
-					</div>		
-				</div>
+					<div class="highlight-slider">
+						<div class="carousel-item">
+							<div class="col-md-4">
+								<div class="highlight-box">
+									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
+									<div class="info-block">
+										<h5>Retirement Fund for Religeous</h5>
+										<p><span>March 4th and 5th 2016</span></p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										</p>		
+									</div>
+								</div>
+							</div>		
+							<div class="col-md-4">
+								<div class="highlight-box">
+									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
+									<div class="info-block">
+										<h5>Retirement Fund for Religeous</h5>
+										<p><span>March 4th and 5th 2016</span></p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										</p>		
+									</div>
+								</div>	
+							</div>		
+							<div class="col-md-4">
+								<div class="highlight-box">
+									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
+									<div class="info-block">
+										<h5>Retirement Fund for Religeous</h5>
+										<p><span>March 4th and 5th 2016</span></p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										</p>		
+									</div>
+								</div>
+							</div>				
+						</div>
+						<div class="carousel-item">
+							<div class="col-md-4">
+								<div class="highlight-box">
+									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
+									<div class="info-block">
+										<h5>Retirement Fund for Religeous</h5>
+										<p><span>March 4th and 5th 2016</span></p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										</p>		
+									</div>
+								</div>
+							</div>		
+							<div class="col-md-4">
+								<div class="highlight-box">
+									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
+									<div class="info-block">
+										<h5>Retirement Fund for Religeous</h5>
+										<p><span>March 4th and 5th 2016</span></p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										</p>		
+									</div>
+								</div>	
+							</div>		
+							<div class="col-md-4">
+								<div class="highlight-box">
+									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
+									<div class="info-block">
+										<h5>Retirement Fund for Religeous</h5>
+										<p><span>March 4th and 5th 2016</span></p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										</p>		
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				</div>	
 			</div>	
 		</section>
 	</div>
 	<footer class="row">
 		<div class="row-content">
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-4 col-xs-4">
 				<h6>Contact</h6>
 				<p>
 					St. Marys Catholic Church</br>
@@ -180,54 +404,159 @@
 					T:973-835-0374
 				</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-4 col-xs-4">
 				<h6>Quick Links</h6>
 				<div class="row">
 					<div class="row-content">
 						<div class="col-md-6">
 							<ul>
-								<li>Women's Journey Retreat</li>
-								<li>Daily Player for Your mp3 Player</li>
-								<li>Daily Prayer for Your Computer</li>
-								<li>A Global Online Rosary</li>
-								<li>Great Resources for Scripture Study</li>
+								<li><a href="#">Women's Journey Retreat</a></li>
+								<li><a href="#">Daily Player for Your mp3 Player</a></li>
+								<li><a href="#">Daily Prayer for Your Computer</a></li>
+								<li><a href="#">A Global Online Rosary</a></li>
+								<li><a href="#">Great Resources for Scripture Study</a></li>
 							</ul>	
 						</div>
 						<div class="col-md-6">
 							<ul>
-								<li>Women's Journey Retreat</li>
-								<li>Daily Player for Your mp3 Player</li>
-								<li>Daily Prayer for Your Computer</li>
-								<li>A Global Online Rosary</li>
-								<li>Great Resources for Scripture Study</li>
+								<li><a href="#">Women's Journey Retreat</a></li>
+								<li><a href="#">Daily Player for Your mp3 Player</a></li>
+								<li><a href="#">Daily Prayer for Your Computer</a></li>
+								<li><a href="#">A Global Online Rosary</a></li>
+								<li><a href="#">Great Resources for Scripture Study</a></li>
 							</ul>							
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-4 col-xs-4 share">
 				<h6>Share</h6>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li><a class="icon-facebook" href="#"></a></li>
+					<li><a class="icon-social-twitter" href="#"></a></li>
+					<li><a class="icon-google-plus" href="#"></a></li>
 				</ul>
 			</div>
 		</div>
 	</footer>
 	<div class="row bottom-info-bar">
-	<div class="row-content">
-		<div class="col-md-9">
-			Copyrights 2016 St.Mary's Parish | All Rights Reserved
+		<div class="row-content">
+			<div class="col-md-9">
+				Copyrights 2016 St.Mary's Parish | All Rights Reserved
+			</div>
+			<div class="col-md-3">Back to Top</div>
 		</div>
-		<div class="col-md-3">
-		Back to Top
-		</div>
-
 	</div>
-</div>
+	<div class="events-calendar">
+		<div class="event-heading">
+			<h5>upcoming events</h5>
+			<div class="icon-cancel"></div>
+		</div>				
+		<div class="events-container">
+			<div class="event-block">
+				<div class="date">
+					<span>19</span>
+					Jan '16
+				</div>
+				<div class="event-venue">
+					<h4>Women of Prayer and Spirit</h4>
+					<span>Tuesday 6:00pm to 7:30pm</span>
+					<span>St. Mary's Church Premises</span>				
+				</div>
+				<div class="event-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </br>
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					</p>
+				</div>			
+			</div>
+			<div class="event-block">
+				<div class="date">
+					<span>19</span>
+					Jan '16
+				</div>
+				<div class="event-venue">
+					<h4>Women of Prayer and Spirit</h4>
+					<span>Tuesday 6:00pm to 7:30pm</span>
+					<span>St. Mary's Church Premises</span>				
+				</div>
+				<div class="event-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </br>
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					</p>
+				</div>			
+			</div>
+			<div class="event-block">
+				<div class="date">
+					<span>19</span>
+					Jan '16
+				</div>
+				<div class="event-venue">
+					<h4>Women of Prayer and Spirit</h4>
+					<span>Tuesday 6:00pm to 7:30pm</span>
+					<span>St. Mary's Church Premises</span>				
+				</div>
+				<div class="event-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					</p>
+				</div>			
+			</div>
+			<div class="event-block">
+				<div class="date">
+					<span>19</span>
+					Jan '16
+				</div>
+				<div class="event-venue">
+					<h4>Women of Prayer and Spirit</h4>
+					<span>Tuesday 6:00pm to 7:30pm</span>
+					<span>St. Mary's Church Premises</span>				
+				</div>
+				<div class="event-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					</p>
+				</div>			
+			</div>
+		</div><!--End of Events Container-->	
+	</div><!--End of Event Calendar-->
 </div><!--End of Wrapper-->
 
+<script type="text/javascript">
+	$(function(){
+		$('.bxslider').bxSlider();
+		$('.event-carousel').bxSlider();
+		$('.news-slider').bxSlider();
+		$('.highlight-slider').bxSlider();
+
+
+		//Click view calendar event - add class
+		$('.view-calendar').on('click', function(e) {
+			e.preventDefault();
+			$('.events-calendar').toggleClass('selected');
+		});
+
+		//Click view event block
+		$('.event-block').on('click', function() {
+			//On-click add color to the date slide event content
+			$(this).toggleClass('clicked');
+			$('.event-content', this).slideToggle();
+		});
+
+		//Closing the calender slide
+		$('.icon-cancel').on('click', function(){
+			$('.events-calendar').removeClass('selected');
+		});
+
+		//Scroll posioning on sticky header
+
+	});	
+
+
+</script>
 
 </body>
 </html>
