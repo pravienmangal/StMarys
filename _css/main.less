@@ -656,13 +656,9 @@
 
 						}
 
-						a:active {
+						a.selected {
 							background-color: @hoverColor;
 						}
-
-						a.icon-search:hover {
-							background-color: none !important;
-						}	
 
 					}
 					.donate {
@@ -674,10 +670,11 @@
 						}
 					}
 
-					a .icon-search {
+					.icon-search {
 						color: @white;
 						padding: 3px 30px;
-					}		
+						cursor: pointer;
+					}	
 				}	
 			}
 		}
@@ -991,7 +988,7 @@
 								padding: 20px;
 							}
 
-							p:after {
+							sub:after {
 								position: relative;
 								content: "";
 								width: 80px;
