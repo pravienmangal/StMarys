@@ -547,10 +547,11 @@
 			background-color: rgba(99,95,95,0.3);
 			transition: background-color .2s ease-in;
 			width: 100%;
-			z-index: 800;
+			z-index: 999;
 			top: 42px;
 			left: 0;
 			position: absolute;
+			overflow: visible !important;
 
 			.logo {
 				width: 172px;
@@ -631,87 +632,88 @@
 					}
 				}
 			}
-		}
-		.ministry-nav {
-			overflow: hidden;
-			background-color: @hoverColor;
-			position: absolute;
-			top: 136px;
-			left: 80px;
-			z-index: 9999;
-			display: none;
-
-			.icon-cancel {
-				color: #a1a2a9;
+			.ministry-nav {
+				overflow: hidden;
+				background-color: @hoverColor;
 				position: absolute;
-				top: 10px;
-				right: 15px;
-				font-size: 26px;
-				cursor: pointer;
-			}
+				top: 87px;
+				left: 15px;
+				z-index: 9999;
+				display: none;
+				width: 100%;
 
-			.ministry-items {
-				overflow: hidden;
-				padding: 40px 80px;
-				font-size: 16px;
-				font-family: 'lato-regular';
+				.icon-cancel {
+					color: #a1a2a9;
+					position: absolute;
+					top: 10px;
+					right: 15px;
+					font-size: 26px;
+					cursor: pointer;
+				}
 
-				ul {
+				.ministry-items {
 					overflow: hidden;
-					border-right: 1px solid #292a2c;
+					padding: 40px 80px;
+					font-size: 16px;
+					font-family: 'lato-regular';
 
-					li {
+					ul {
+						overflow: hidden;
+						border-right: 1px solid #292a2c;
 
-						a {
-							color: @white;
+						li {
+
+							a {
+								color: @white;
+								line-height: 29px;
+								font-size: 16px;
+							}
+
+							a:hover {
+								color: @buttonColor;
+							}
+
+							a.selected {
+								color: @buttonColor;
+							}				
+						}
+					}
+
+					ul.last-col {
+						border-right: none;
+					}
+				}
+
+				.ministry-content {
+					overflow: hidden;
+					padding: 20px 80px 50px;
+
+					.ministry-info {
+						overflow: hidden;
+
+						h5 {
+							font-family: 'lato-bold';
 							line-height: 29px;
-							font-size: 16px;
-						}
-
-						a:hover {
 							color: @buttonColor;
 						}
 
-						a.selected {
-							color: @buttonColor;
-						}				
-					}
-				}
-
-				ul.last-col {
-					border-right: none;
-				}
-			}
-
-			.ministry-content {
-				overflow: hidden;
-				padding: 20px 80px 50px;
-
-				.ministry-info {
-					overflow: hidden;
-
-					h5 {
-						font-family: 'lato-bold';
-						line-height: 29px;
-						color: @buttonColor;
+						p {
+							font-family: 'lato-regular';
+							font-size: 14px;
+							color: @white;
+						}
 					}
 
-					p {
-						font-family: 'lato-regular';
-						font-size: 14px;
-						color: @white;
+					.ministry-content-item {
+						overflow: hidden;
+						display: none;
+
 					}
-				}
 
-				.ministry-content-item {
-					overflow: hidden;
-					display: none;
-
-				}
-
-				.ministry-content-item {
-					&.active{
-						display: block;
+					.ministry-content-item {
+						&.active{
+							display: block;
+						}
 					}
 				}
 			}
@@ -778,7 +780,7 @@
 							text-align: center;
 							overflow: hidden;
 							text-transform: uppercase;
-							color: @copyColor;
+							color: @white;
 							font-family: 'lato-regular';
 							display: inline-block;
 							float: left;
@@ -841,7 +843,6 @@
 				}
 			}
 		}
-
 		h5.title {
 			margin: 30px auto 40px;
 			padding: 10px;
@@ -849,7 +850,6 @@
 			font-size: 18px;
 			line-height: 22px;
 		}
-
 		h5.title:after {
 			position: relative;
 			background-color: @buttonColor;
@@ -858,8 +858,13 @@
 			width: 60px;
 			content: "";
 			margin: 10px auto 0;
-		}	
-
+		}
+		.news-carousel, .highlights-carousel {
+			.row-content {
+				max-width: 1280px;
+				padding: 0 80px;
+			}
+		}
 		.news-carousel {
 			text-align: center;
 			overflow: hidden;
@@ -915,7 +920,6 @@
 				}
 			}			
 		}
-
 		.highlights-carousel {
 			text-align: center;
 			overflow: hidden;
@@ -971,13 +975,14 @@
 			color: #6b6b6b;
 			margin: 0 auto;
 			font-family: 'lato-regular';
-			border-bottom: 1px solid @borderColor;
+			border-bottom: 1px solid #6b6b6b;
 			padding: 80px 0;
 
 			h6 {
 				font-family: 'lato-bold'; 
 				color: @white;
 				text-transform: uppercase;
+				margin-bottom: 15px;
 			}
 
 			h6:before {
@@ -996,7 +1001,7 @@
 				li {
 					a  {
 						line-height: 30px;
-						color: #6b6b6b;						
+						color: #b2b2b2;						
 					}
 				}
 			}
@@ -1015,16 +1020,16 @@
 						}
 
 						a {
-							padding: 7px 12px;
+							padding: 9px 10px;
 							background-color: #333333;
-							border-radius: 50%;	
-							line-height: 36px;						
+							border-radius: 50%;
+							display: inline-block;
 						}
 					}
-					.icon-facebook, 
-					.icon-social-twitter, 
-					.icon-google-plus {
+					.icon {
 						color: @white;
+						font-size: 18px;
+						line-height: 1;
 					}
 				}
 			}
@@ -1125,7 +1130,7 @@
 						display: inline-block;
 						background-color: #ededee;
 						height: 80px;
-
+						width: 260px;
 
 						h4 {
 							color: @eventColor;
