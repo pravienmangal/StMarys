@@ -615,13 +615,11 @@
 			}
 		}
 		header {
-			background: rgba(255,255,255,.3);
-			/*position: fixed;*/
+			background: rgba(99,95,95,0.9);
 			width: 100%;
 			z-index: 800;
 			top: 46px;
 			left: 0;
-			background-color: @buttonColor;
 
 			.logo {
 				width: 172px;
@@ -711,6 +709,7 @@
 						a {
 							color: @white;
 							line-height: 29px;
+							font-size: 16px;
 						}
 
 						a:hover {
@@ -988,13 +987,14 @@
 								padding: 20px;
 							}
 
-							sub:after {
+							.sub:after {
 								position: relative;
 								content: "";
 								width: 80px;
 								height: 1px;
 								background-color: @white;
-								margin: 10px auto 0;
+								margin: 20px auto 0;
+								display: block;
 							}							
 
 							&.info-block:hover {
@@ -1043,16 +1043,22 @@
 
 			.share {
 				ul {
+					overflow: hidden;
+
 					li {
 						float: left;
-						padding: 7px 12px;
-						background-color: #333333;
-						border-radius: 50%;
 						margin-right: 15px;
 						margin-bottom: 5px;
 
 						&:last-child {
 							margin-right: 0;
+						}
+
+						a {
+							padding: 7px 12px;
+							background-color: #333333;
+							border-radius: 50%;	
+							line-height: 36px;						
 						}
 					}
 					.icon-facebook, 

@@ -24,7 +24,7 @@
 			</div>
 		</div>
 	</div>
-	<header class="row">
+	<header class="row fixed">
 		<div class="row-content">
 			<a class="col-md-3 logo" href="/"><img src="../_images/logo.png" alt="logo"></a>
 			<nav class="col-md-9">
@@ -105,6 +105,42 @@
 				<div class="col-md-7">
 					<div class="ministry-info">
 						<h5>Pathway Counseling Center</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>				
+			</div>
+			<div class="ministry-content-item" id="ministry-content4">
+				<div class="col-md-5">
+					<div class="ministry-thumbnail"><img src="../_images/minis-thumb.png"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="ministry-info">
+						<h5>Social Justice</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>				
+			</div>
+			<div class="ministry-content-item" id="ministry-content5">
+				<div class="col-md-5">
+					<div class="ministry-thumbnail"><img src="../_images/minis-thumb.png"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="ministry-info">
+						<h5>Health & Wellness</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>				
+			</div>
+			<div class="ministry-content-item" id="ministry-content6">
+				<div class="col-md-5">
+					<div class="ministry-thumbnail"><img src="../_images/minis-thumb.png"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="ministry-info">
+						<h5>Parish Life</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 					</div>
@@ -404,7 +440,7 @@
 									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
 									<div class="info-block">
 										<h5>Retirement Fund for Religeous</h5>
-										<p><span>March 4th and 5th 2016</span></p>
+										<div class="sub"><span>March 19th and 5th 2016</span></div>
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 										</p>		
@@ -416,7 +452,7 @@
 									<div class="img-block"><img src="../_images/mac.jpg" alt="img"></div>
 									<div class="info-block">
 										<h5>Retirement Fund for Religeous</h5>
-										<p><span>March 4th and 5th 2016</span></p>
+										<div class="sub"><span>March 4th and 5th 2016</span></div>
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 										</p>		
@@ -652,7 +688,6 @@
 		});
 
 
-
 		//Click view calendar event - add class-------------------------------
 		$('.view-calendar').on('click', function(e) {
 			e.preventDefault();
@@ -671,7 +706,13 @@
 			$('.events-calendar').removeClass('selected');
 		});
 
+
 		//Scroll posioning on sticky header------------------------------------
+		$(window).scroll(function(){
+			if($(window).scrollTop() >= 300) {
+				$('header').addClass('header.fixed');
+			} 
+		});
 
 	});	
 
