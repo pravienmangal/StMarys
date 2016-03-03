@@ -57,7 +57,7 @@
 
 .upcoming-event .bx-pager {
 	position: absolute;
-	bottom: 5px;
+	bottom: -38px;
 	left: 420px;
 }
 
@@ -129,23 +129,23 @@
 	left: 100px;
 	background: url(images/prev.png) no-repeat 30px 35px;
 	padding: 40px;
-	border: 3px solid #ccc;
+	border: 3px solid rgba(255,255,255,.5);
 }
 
 .hero-carousel .bx-next {
 	right: 100px;
 	background: url(images/next.png) no-repeat 30px 35px;
 	padding: 40px;
-	border: 3px solid #ccc;
+	border: 3px solid  rgba(255,255,255,.5);
 }
 
 .upcoming-event .bx-prev {
-	left: 0px;
+	left: -50px;
 	background: url(images/prev-event.png) no-repeat 0px 0px;
 }
 
 .upcoming-event .bx-next {
-	right: 0px;
+	right: -50px;
 	background: url(images/next-event.png) no-repeat 0px 0px;
 }
 

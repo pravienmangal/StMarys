@@ -1,7 +1,7 @@
 
 /* 	--------------------------------------------------
 	CSS LESS
-	PROJECT : Appleby - FidCo
+	PROJECT : StMarys
 	BY : GAJEN
 	DATE : FEBRUARY 2016
 	-------------------------------------------------- */
@@ -340,123 +340,48 @@
 	/*	7.1 ----------------------------------------------
 		FONTFACE
 		-------------------------------------------------- */
-		@font-face {
-		    font-family: 'lato-bold';
-		    src: url('../_fonts/lato-webfontkit/lato-bold-webfont.eot');
-		    src: url('../_fonts/lato-webfontkit/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/lato-webfontkit/lato-bold-webfont.woff') format('woff'),
-		         url('../_fonts/lato-webfontkit/lato-bold-webfont.ttf') format('truetype'),
-		         url('../_fonts/lato-webfontkit/lato-bold-webfont.svg#lato-bold') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}   
+
 
 		@font-face {
 		    font-family: 'lato-black';
-		    src: url('../_fonts/lato-webfontkit/lato-black-webfont.eot');
-		    src: url('../_fonts/lato-webfontkit/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/lato-webfontkit/lato-black-webfont.woff') format('woff'),
-		         url('../_fonts/lato-webfontkit/lato-black-webfont.ttf') format('truetype'),
-		         url('../_fonts/lato-webfontkit/lato-black-webfont.svg#lato-black') format('svg');
+		    src: url('../_fonts/lato-black.eot');
+		    src: url('../_fonts/lato-black.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/lato-black.woff') format('woff'),
+		         url('../_fonts/lato-black.ttf') format('truetype'),
+		         url('../_fonts/lato-black.svg#latoblack') format('svg');
 		    font-weight: normal;
 		    font-style: normal;
-		}    
-		
+
+		}
+		@font-face {
+		    font-family: 'lato-bold';
+		    src: url('../_fonts/lato-bold.eot');
+		    src: url('../_fonts/lato-bold.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/lato-bold.woff') format('woff'),
+		         url('../_fonts/lato-bold.ttf') format('truetype'),
+		         url('../_fonts/lato-bold.svg#latobold') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
 		@font-face {
 		    font-family: 'lato-regular';
-		    src: url('../_fonts/lato-webfontkit/lato-regular-webfont.eot');
-		    src: url('../_fonts/lato-webfontkit/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/lato-webfontkit/lato-regular-webfont.woff') format('woff'),
-		         url('../_fonts/lato-webfontkit/lato-regular-webfont.ttf') format('truetype'),
-		         url('../_fonts/lato-webfontkit/lato-regular-webfont.svg#lato-regular') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}    
-		
-		@font-face {
-		    font-family: 'montserratblack';
-		    src: url('../_fonts/montserrat-black.eot');
-		    src: url('../_fonts/montserrat-black.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-black.woff') format('woff'),
-		         url('../_fonts/montserrat-black.ttf') format('truetype'),
-		         url('../_fonts/montserrat-black.svg#montserratblack') format('svg');
+		    src: url('../_fonts/lato-regular.eot');
+		    src: url('../_fonts/lato-regular.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/lato-regular.woff') format('woff'),
+		         url('../_fonts/lato-regular.ttf') format('truetype'),
+		         url('../_fonts/lato-regular.svg#latoregular') format('svg');
 		    font-weight: normal;
 		    font-style: normal;
 
 		}
 		@font-face {
-		    font-family: 'montserratbold';
-		    src: url('../_fonts/montserrat-bold.eot');
-		    src: url('../_fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-bold.woff') format('woff'),
-		         url('../_fonts/montserrat-bold.ttf') format('truetype'),
-		         url('../_fonts/montserrat-bold.svg#montserratbold') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-
-		}
-		@font-face {
-		    font-family: 'montserratextra_bold';
-		    src: url('../_fonts/montserrat-extrabold.eot');
-		    src: url('../_fonts/montserrat-extrabold.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-extrabold.woff') format('woff'),
-		         url('../_fonts/montserrat-extrabold.ttf') format('truetype'),
-		         url('../_fonts/montserrat-extrabold.svg#montserratextra_bold') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-
-		}
-		@font-face {
-		    font-family: 'montserrathairline';
-		    src: url('../_fonts/montserrat-hairline.eot');
-		    src: url('../_fonts/montserrat-hairline.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-hairline.woff') format('woff'),
-		         url('../_fonts/montserrat-hairline.ttf') format('truetype'),
-		         url('../_fonts/montserrat-hairline.svg#montserrathairline') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-
-		}
-		@font-face {
-		    font-family: 'montserratlight';
-		    src: url('../_fonts/montserrat-light.eot');
-		    src: url('../_fonts/montserrat-light.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-light.woff') format('woff'),
-		         url('../_fonts/montserrat-light.ttf') format('truetype'),
-		         url('../_fonts/montserrat-light.svg#montserratlight') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-
-		}
-		@font-face {
-		    font-family: 'montserratregular';
-		    src: url('../_fonts/montserrat-regular.eot');
-		    src: url('../_fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-regular.woff') format('woff'),
-		         url('../_fonts/montserrat-regular.ttf') format('truetype'),
-		         url('../_fonts/montserrat-regular.svg#montserratregular') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-
-		}
-		@font-face {
-		    font-family: 'montserratsemi_bold';
-		    src: url('../_fonts/montserrat-semibold.eot');
-		    src: url('../_fonts/montserrat-semibold.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-semibold.woff') format('woff'),
-		         url('../_fonts/montserrat-semibold.ttf') format('truetype'),
-		         url('../_fonts/montserrat-semibold.svg#montserratsemi_bold') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-
-		}
-		@font-face {
-		    font-family: 'montserratultra_light';
-		    src: url('../_fonts/montserrat-ultralight.eot');
-		    src: url('../_fonts/montserrat-ultralight.eot?#iefix') format('embedded-opentype'),
-		         url('../_fonts/montserrat-ultralight.woff') format('woff'),
-		         url('../_fonts/montserrat-ultralight.ttf') format('truetype'),
-		         url('../_fonts/montserrat-ultralight.svg#montserratultra_light') format('svg');
+		    font-family: 'open_sanssemibold';
+		    src: url('../_fonts/OpenSans-Semibold-webfont.eot');
+		    src: url('../_fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../_fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+		         url('../_fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+		         url('../_fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
 		    font-weight: normal;
 		    font-style: normal;
 
@@ -490,7 +415,7 @@
 		textarea, 
 		button {
 			font-size: 14px;
-			font-family: 'montserratlight', Arial, sans-serif;
+			font-family: 'lato-regular', Arial, sans-serif;
 			font-weight:400;
 			line-height: 1.2;
 		}
@@ -500,7 +425,7 @@
 		h1, h2, h3, h4, h5, h6 {
 			font-weight: normal;
 			line-height: 1.2;
-			font-family: 'montserratregular', Arial, verdana;
+			font-family: 'lato-bold', Arial, verdana;
 			color: #000;
 		}
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { 
@@ -597,11 +522,12 @@
 			overflow: hidden;
 		}
 		.top-info-bar {
-			background-color: #4e505d;
+			background-color: @eventColor;
 			margin-bottom: 0;
 			color: @white;
+			font-family: 'open_sanssemibold';
 			text-transform: uppercase;
-			font-size: 12px;
+			font-size: 14px;
 			padding: 10px 0;
 			text-align: center;
 
@@ -609,30 +535,35 @@
 				border: 1px solid @white;
 				border-radius: 10px;
 				color: @white;
-				padding: 5px;
+				padding: 5px 10px;
 				margin-left: 20px; 
 				display: inline-block;
+				font-family: 'lato-bold';
+				font-size: 10px;
+				line-height: 1;
 			}
 		}
 		header {
-			background: rgba(99,95,95,0.9);
+			background-color: rgba(99,95,95,0.3);
+			transition: background-color .2s ease-in;
 			width: 100%;
 			z-index: 800;
-			top: 46px;
+			top: 42px;
 			left: 0;
+			position: absolute;
 
 			.logo {
 				width: 172px;
 				height: 62px;
 				display: inline-block;
+				background: url('../_images/logo.png');
+				margin: 10px 0;
 			}
-			nav {
-				float: right !important;
+			.main-nav {
+				float: right;
 				overflow: hidden;
-				height: 90px;
 
 				ul {
-					padding-top: 35px;
 					float: right;
 					overflow: hidden;
 
@@ -640,40 +571,65 @@
 						float: left;
 
 						a {
-							color: @white !important;
+							color: @white;
 							font-size: 12px;
 							text-transform: uppercase;
 							padding: 35px 30px 38px 30px;
 							font-family: 'lato-bold';
 							clear: both;
-
+							display: inline-block;
 						}
-
 						a:hover {
 							background-color: @hoverColor;
 
 						}
-
 						a.selected {
 							background-color: @hoverColor;
 						}
+						&.donate {
+							border-radius: 10px;
+							padding: 33px 30px 38px 30px;
 
+							a {
+								background-color: @white;
+								color: #4d8fda;
+								display: inline;
+								padding: 2px 12px;
+								border-radius: 10px;
+								font-size: 12px;
+								text-transform: uppercase;
+							}
+						}
+						&.icon-search {
+							color: @white;
+							padding: 30px 0 0 30px;
+							cursor: pointer;
+							font-size: 22px;
+						}	
 					}
-					.donate {
-						border-radius: 10px;
-						background-color: @white;
+				}	
+			}
+			&.fixed {
+				position: fixed;
+				width: 100%;
+				left: 0;
+				top: 0px;
+				background-color: @white;
+				transition: background-color .2s ease-in;
+				box-shadow: 0px 3px 4px #ccc;
 
-						a {
-							color: #4d8fda !important;
+				.main-nav {
+					ul {
+						li {
+							a {
+								color: @copyColor;
+							}
+							&.icon-search {
+								color: @copyColor;
+							}	
 						}
 					}
-
-					.icon-search {
-						color: @white;
-						padding: 3px 30px;
-						cursor: pointer;
-					}	
-				}	
+				}
 			}
 		}
 		.ministry-nav {
@@ -760,248 +716,252 @@
 				}
 			}
 		}
-		.container-area {
-			.hero {
-				position: relative;
+		.hero {
+			position: relative;
 
-				.hero-carousel {
-					.carousel-item {
-						position: relative;
-						margin-right: 15px;
-
-						.carousel-item-info {
-							max-width: 800px;
-							position: absolute;
-							top: 250px;
-							left: 240px;
-
-							h2 {
-								color: @white;
-								text-transform: uppercase;
-								font-family: 'lato-black';
-							}
-
-							p {
-								color: @white;
-								font-family: 'lato-regular';
-								margin-bottom: 30px;
-							}
-
-							a.button {
-								color: @white;
-								font-size: 14px;
-								padding: 15px 30px;
-								background-color: @buttonColor;
-								font-family: 'lato-regular';		
-							}
-						}
-					}
-				}
-				.upcoming-event{
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					background: rgba(99,95,95,.9);
-					width: 100%;
-
-					.event-container {
-						padding: 50px 0;
-
-						.event-column {
-							overflow: hidden;
-
-							.date {
-								width: 80px;
-								height: 80px;
-								background-color: @buttonColor;
-								text-align: center;
-								overflow: hidden;
-								text-transform: uppercase;
-								color: @copyColor;
-								font-family: 'lato-regular';
-								display: inline-block;
-								float: left;
-
-								span {
-									font-family: 'lato-black';
-									font-weight: bold;
-									font-size: 40px;
-									display: block;
-									color: @copyColor;
-								}
-
-							}
-
-							.event-venue {
-								float: left;
-								color: @white;
-								padding: 0 5px;
-								font-family: 'lato-black';
-								border-right: 2px solid @buttonColor;
-
-								h4 {
-									color: @copyColor;
-									line-height: 10px;
-									text-transform: uppercase;
-								}
-
-								span {
-									color: #79797c;
-									display: block;
-									font-size: 14px;
-									line-height: 20px;
-								}
-							}
-
-							.event-info {
-								color: @copyColor;
-								font-family: 'lato-regular';
-								padding: 0 10px;
-								display: block;
-								overflow: hidden;
-
-								p {
-									line-height: 16px;
-								}
-							}
-						}
-
-						a.view-calendar {
-							color: @copyColor;
-							font-family: 'lato-black';
-							font-size: 20px;
-							font-weight: bold;
-							border: 2px solid @copyColor;
-							line-height: 75px;
-							padding: 0 20px;
-							display: block;
-						}
-					}
-				}
-			}
-
-			.container-wrapper {
-				background-color: @white;
-				overflow: hidden;
-				margin: 0 auto;
-				text-align: center;
-				padding-bottom: 80px;
-
-				h5.title {
-					margin: 30px auto 0;
-					padding: 10px;
-					width: 250px;
-					vertical-align: middle;
-					font-family: 'lato-bold';
-					font-size: 18px;
-					line-height: 29px;
-				}
-
-				h5.title:after {
+			.hero-carousel {
+				.carousel-item {
 					position: relative;
-					background-color: @buttonColor;
-					display: block;
-					height: 1px;
-					width: 60px;
-					content: "";
-					margin: 10px auto 0;
-				}	
+					margin-right: 15px;
 
-				.news-carousel {
-					overflow: hidden;
-					margin: 0 auto;
-					border-bottom: 1px solid @borderColor;
-					padding: 40px 0 80px 0;					
+					.carousel-item-info {
+						max-width: 685px;
+						position: absolute;
+						top: 230px;
+						left: 240px;
 
-					.news-box {
-						border: 1px solid @borderColor;
-						padding: 30px 20px;
-						margin-bottom: 10px;
-						background-color: #f4f4f4;
-						font-family: 'lato-regular';
-						color: #4e505d;
-
-						span {
-							font-family: 'lato-regular';
-							font-size: 12px;
-							line-height: 29px;
+						h2 {
+							color: @white;
+							text-transform: uppercase;
+							font-family: 'lato-black';
+							font-size: 40px;
+							line-height: 46px;
+							margin-bottom: 20px;
 						}
 
-
-						h5 {
-							font-family: 'lato-bold';
-							font-size: 18px;
-							line-height: 0;
-							color: #4e505d;
-
+						p {
+							color: @white;
+							font-family: 'lato-regular';
+							margin-bottom: 30px;
+							font-size: 14px;
+							line-height: 18px;
 						}
 
 						a.button {
 							color: @white;
-							font-size: 14px;
-							padding: 15px 30px;
+							font-size: 18px;
+							padding: 12px 35px;
 							background-color: @buttonColor;
-							font-family: 'lato-bold';		
+							font-family: 'lato-regular';		
+						}
+					}
+				}
+			}
+			.upcoming-event{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: rgba(78,80,93,.8);
+				width: 100%;
+
+				.event-container {
+					padding: 50px 0 0 0;
+
+					.event-column {
+						overflow: hidden;
+						padding: 0 50px 50px;
+
+						.date {
+							width: 80px;
+							height: 80px;
+							background-color: @buttonColor;
+							text-align: center;
+							overflow: hidden;
+							text-transform: uppercase;
+							color: @copyColor;
+							font-family: 'lato-regular';
+							display: inline-block;
+							float: left;
+
+							span {
+								font-family: 'lato-black';
+								font-weight: bold;
+								font-size: 40px;
+								display: block;
+								color: @copyColor;
+							}
 
 						}
 
-						.info-box {
-							height: 200px;
-							padding: 30px 0;
+						.event-venue {
+							float: left;
+							color: @white;
+							padding: 0 20px;
+							font-family: 'lato-black';
+							border-right: 1px solid @buttonColor;
 
-							p {
-								font-family: 'lato-regular';
+							h4 {
+								color: @copyColor;
+								line-height: 10px;
+								text-transform: uppercase;
+							}
+
+							span {
+								color: #79797c;
+								display: block;
 								font-size: 14px;
+								line-height: 20px;
 							}
 						}
-					}			
+
+						.event-info {
+							font-family: 'lato-regular';
+							padding: 0 20px;
+							display: block;
+							overflow: hidden;
+							color: @white;
+
+							p {
+								line-height: 18px;
+								padding: 5px 0;
+							}
+						}
+					}
+
+					a.view-calendar {
+						color: @white;
+						font-family: 'lato-black';
+						font-size: 20px;
+						font-weight: bold;
+						border: 2px solid @white;
+						line-height: 75px;
+						padding: 0 20px;
+						display: block;
+					}
+				}
+			}
+		}
+
+		h5.title {
+			margin: 30px auto 40px;
+			padding: 10px;
+			font-family: 'lato-bold';
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		h5.title:after {
+			position: relative;
+			background-color: @buttonColor;
+			display: block;
+			height: 1px;
+			width: 60px;
+			content: "";
+			margin: 10px auto 0;
+		}	
+
+		.news-carousel {
+			text-align: center;
+			overflow: hidden;
+			margin: 0 auto;
+			border-bottom: 1px solid @borderColor;
+			padding: 40px 0 40px 0;					
+
+			.news-box {
+				border: 1px solid @borderColor;
+				padding: 30px 20px;
+				margin-bottom: 10px;
+				background-color: #f4f4f4;
+				font-family: 'lato-regular';
+				color: @eventColor;
+
+				h5 {
+					font-family: 'lato-bold';
+					font-size: 18px;
+					line-height: 22px;
+					color: @eventColor;
+					margin-bottom: 15px;
+
+					span {
+						font-family: 'lato-regular';
+						font-size: 12px;
+						line-height: 14px;
+						display: block;
+						margin-top: 5px;
+
+					}
 				}
 
-				.highlights-carousel {
-					overflow: hidden;
-					margin: 0 auto;
-					padding-top: 20px;	
+				a.button {
+					color: @white;
+					font-size: 14px;
+					padding: 15px 30px;
+					background-color: @buttonColor;
+					font-family: 'lato-bold';
+					display: inline-block;
+					text-transform: uppercase;	
 
-					.highlight-box {
+				}
+
+				.info-box {
+					height: 200px;
+					padding: 30px 0;
+
+					p {
+						font-family: 'lato-regular';
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+			}			
+		}
+
+		.highlights-carousel {
+			text-align: center;
+			overflow: hidden;
+			margin: 0 auto 80px;
+			padding-top: 20px;	
+
+			.highlight-box {
+				position: relative;
+				overflow: hidden;
+				margin: 0 12px;
+
+				.info-block {
+					color: @white;
+					background: rgba(7,8,10,.5);
+					width: 100%;
+					font-family: 'lato-regular';
+					position: absolute;
+					top: 170px;
+					height: 100%;
+					transition: top .5s ease-in;
+					cursor: pointer;
+
+					h5 {
+						color: @white;
+						font-family: 'lato-regular';
+						font-size: 18px;
+						line-height: 29px;							
+					}
+
+					p {
+						padding: 20px;
+					}
+
+					.sub:after {
 						position: relative;
-						overflow: hidden;
+						content: "";
+						width: 80px;
+						height: 1px;
+						background-color: @white;
+						margin: 20px auto 0;
+						display: block;
+					}							
 
-						.info-block {
-							color: @white;
-							background: rgba(7,8,10,.5);
-							width: 100%;
-							font-family: 'lato-regular';
-							position: absolute;
-							top: 195px;
-							height: 100%;
-							transition: top .5s ease-in;
-
-							h5 {
-								color: @white;
-								font-family: 'lato-regular';
-								font-size: 18px;
-								line-height: 29px;							
-							}
-
-							p {
-								padding: 20px;
-							}
-
-							.sub:after {
-								position: relative;
-								content: "";
-								width: 80px;
-								height: 1px;
-								background-color: @white;
-								margin: 20px auto 0;
-								display: block;
-							}							
-
-							&.info-block:hover {
-								top: 0;
-								transition: top .5s ease-in;
-							}
-						}
+					&.info-block:hover {
+						top: 0;
+						transition: top .5s ease-in;
 					}
 				}
 			}
