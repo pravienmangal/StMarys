@@ -544,14 +544,14 @@
 			}
 		}
 		header {
-			background-color: rgba(99,95,95,0.3);
+			background: @white;
 			transition: background-color .2s ease-in;
 			width: 100%;
 			z-index: 999;
 			top: 42px;
 			left: 0;
-			position: absolute;
 			overflow: visible !important;
+			position: relative;
 
 			.logo {
 				width: 172px;
@@ -563,6 +563,7 @@
 			.main-nav {
 				float: right;
 				overflow: hidden;
+				display: none;
 
 				ul {
 					float: right;
@@ -717,6 +718,22 @@
 					}
 				}
 			}
+			.mobile-nav {
+				position: absolute;
+				right: 15px;
+				top: 15px;
+
+				ul {
+					margin: 0;
+
+					li {
+						width: 40px;
+						height: 4px;
+						margin-bottom: 6px;
+						background: @buttonColor;
+					}
+				}
+			}
 		}
 		.hero {
 			position: relative;
@@ -727,6 +744,7 @@
 					margin-right: 15px;
 
 					.carousel-item-info {
+						display: none;
 						max-width: 685px;
 						position: absolute;
 						top: 230px;
@@ -760,7 +778,6 @@
 				}
 			}
 			.upcoming-event{
-				position: absolute;
 				bottom: 0;
 				left: 0;
 				background: rgba(78,80,93,.8);
@@ -772,6 +789,7 @@
 					.event-column {
 						overflow: hidden;
 						padding: 0 50px 50px;
+						display: none;
 
 						.date {
 							width: 80px;
@@ -858,12 +876,6 @@
 			width: 60px;
 			content: "";
 			margin: 10px auto 0;
-		}
-		.news-carousel, .highlights-carousel {
-			.row-content {
-				max-width: 1280px;
-				padding: 0 80px;
-			}
 		}
 		.news-carousel {
 			text-align: center;
@@ -977,6 +989,7 @@
 			font-family: 'lato-regular';
 			border-bottom: 1px solid #6b6b6b;
 			padding: 80px 0;
+			text-align: center;
 
 			h6 {
 				font-family: 'lato-bold'; 
@@ -996,7 +1009,7 @@
 			}
 
 			ul {
-				text-align: left;
+				text-align: center;
 
 				li {
 					a  {
@@ -1007,8 +1020,10 @@
 			}
 
 			.share {
+				text-align: center;
 				ul {
 					overflow: hidden;
+					display: inline-block;
 
 					li {
 						float: left;
@@ -1039,9 +1054,10 @@
 			color: #6b6b6b;
 			font-family: 'lato-regular';
 			padding: 20px 0;
+			text-align: center;
 
-			.col-md-3 {
-				text-align: right;
+			.back-to-top {
+				text-align: center;
 			}
 		}
 		.events-calendar {
@@ -1162,7 +1178,14 @@
 				}
 			}
 		}
-
+		.news-carousel, .highlights-carousel {
+			[class*="col-"] {
+				margin-bottom: 20px;
+			}
+		}
+		.hero-carousel .bx-controls-direction a, .bx-wrapper .bx-pager {
+			display: none;
+		}
 
 
 	/*	8.1.1 ----------------------------------------------
@@ -1185,6 +1208,53 @@
 		-------------------------------------------------- */
 		
 		@media only screen and (min-width: 768px) {
+			header {
+				background-color: rgba(99,95,95,0.3);
+				position: absolute;
+
+				.main-nav {
+					display: block;
+				}
+				.mobile-nav {
+					display: none;
+				}
+			}
+			.hero {
+				.upcoming-event {
+					position: absolute;
+
+					.event-container {
+						.event-column {
+							display: block;
+						}
+					}
+				}
+				.hero-carousel {
+					.carousel-item {
+						.carousel-item-info {
+							display: block;
+						}
+					}
+				}
+			}
+			.news-carousel, .highlights-carousel {
+				.row-content {
+					max-width: 1280px;
+					padding: 0 80px;
+				}
+				[class*="col-"] {
+					margin-bottom: 0;
+				}
+			}
+			footer {
+				text-align: left;
+				ul {
+					text-align: left;
+				}
+			}
+			.hero-carousel .bx-controls-direction a, .bx-wrapper .bx-pager {
+				display: block;
+			}
 		}
 
 	/*	8.3 ----------------------------------------------

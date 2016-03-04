@@ -23,9 +23,9 @@
 	<script type="text/javascript" src="../_js/libs/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../_js/libs/jquery.bxslider.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../_css/bootstrap/bootstrap.min.css">
-	<link href="../_js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../_css/jquery.bxslider.css" />
 	<link rel="stylesheet" type="text/css" href="../_fonts/font-icon/styles.css">
-	<!--[if !(IE 7)]><!--><link rel="stylesheet" href="../_css/main.css"><!--<![endif]-->
+	<!--[if !(IE 7)]><!--><link rel="stylesheet" type="text/css" href="../_css/main.css"><!--<![endif]-->
 
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="../_css/ie.css">
@@ -53,7 +53,14 @@
 						<li class="icon icon-search"></li>
 					</ul>
 				</nav>
-			</div>	
+			</div>
+			<div class="mobile-nav">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
 			<div class="row ministry-nav">
 				<div class="icon icon-cancel"></div>
 				<div class="row-content ministry-items">
@@ -258,9 +265,7 @@
 							</div>
 						</div>
 						<div class="col-md-3">
-							<a href="#" class="view-calendar">
-								View Event Calendar
-							</a>
+							<a href="#" class="view-calendar">View Event Calendar</a>
 						</div>
 					</div>
 				</div>			
@@ -516,7 +521,7 @@
 		</div>
 		<footer class="row">
 			<div class="row-content">
-				<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="col-md-3 col-sm-4 col-xs-12">
 					<h6>Contact</h6>
 					<p>
 						St. Marys Catholic Church</br>
@@ -525,7 +530,7 @@
 						T:973-835-0374
 					</p>
 				</div>
-				<div class="col-md-6 col-sm-4 col-xs-6">
+				<div class="col-md-6 col-sm-4 col-xs-12">
 					<h6>Quick Links</h6>
 					<div class="row">
 						<div class="row-content">
@@ -642,95 +647,9 @@
 						</p>
 					</div>			
 				</div>
-			</div><!--End of Events Container-->	
-		</div><!--End of Event Calendar-->
-	</div><!--End of Wrapper-->
-	<script type="text/javascript">
-
-		$(function(){
-
-			//bxSlider carousels---------------------------------------------------
-			$('.bxslider').bxSlider();
-			$('.event-carousel').bxSlider();
-			$('.news-slider').bxSlider();
-			$('.highlight-slider').bxSlider();
-
-			//Ministry navigation slide--------------------------------------------
-			$('.main-nav ul li').on('click', function(e) {
-				if($(this).hasClass('ministry')){
-					e.preventDefault();
-					$('.ministry-nav').slideDown(500);
-					$('nav li a').removeClass('selected');
-					$('a', this).addClass('selected');
-				}else {
-				$('.ministry-nav').slideUp(500);
-				}
-			});
-
-			//Close navigation slider----------------------------------------------
-			$('.ministry-nav .icon-cancel').on('click', function(){
-				$('.ministry-nav').slideUp(500);
-			});	
-
-
-			//Ministry links and contents------------------------------------------
-			var $ministryLink = $('.ministry-items li a');
-
-			$ministryLink.click(function(e){
-				e.preventDefault();
-
-				//To show clicked link as active
-				$('.ministry-items li a.selected').removeClass('selected');
-				$(this).addClass('selected');
-				
-				//Which content to show			
-				var $contentToShow = $(this).attr('data-contentId');
-
-				//Which content to hide
-				$('.ministry-content-item.active').hide(function(){
-					$(this).removeClass('active');
-					$('#'+ $contentToShow).show(function(){
-						$(this).addClass('active');
-					});
-				});
-			});
-
-
-			//Click view calendar event - add class-------------------------------
-			$('.view-calendar').on('click', function(e) {
-				e.preventDefault();
-				$('.events-calendar').toggleClass('selected');
-			});
-
-			//Click view event block
-			$('.event-block').on('click', function() {
-				//On-click add color to the date slide event content
-				$(this).toggleClass('clicked');
-				$('.event-content', this).slideToggle();
-			});
-
-			//Closing the calender slide
-			$('.icon-cancel').on('click', function(){
-				$('.events-calendar').removeClass('selected');
-			});
-
-
-			//Scroll posioning on sticky header------------------------------------
-			$(window).scroll(function(){
-				if($(window).scrollTop() >= 42) {
-					$('header').addClass('fixed');
-				} else {
-					$('header').removeClass('fixed');
-				}
-			});
-
-			//Scroll to top
-			$('.back-to-top').click(function(e){
-				e.preventDefault();
-				$("html, body").animate({ scrollTop: 0 }, 600);
-			});
-
-		});	
-	</script>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_js/main.js"></script>
 </body>
 </html>
